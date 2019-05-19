@@ -30,6 +30,11 @@
             <artifactId>commons-codec</artifactId>
             <version>1.11</version>
         </dependency>
+        <dependency>
+            <groupId>com.guardtime</groupId>
+            <artifactId>ksi-api</artifactId>
+            <version>4.14.193</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -24,5 +24,4 @@ public class HashChainBuilderTest extends TestUtil {
         HashChainBuilder.build(hashTree, "bla");
     }
 
-
 }
