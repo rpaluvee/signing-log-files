@@ -42,14 +42,8 @@ $ java -jar ./target/signing-log-files.jar
 ### Example of use
 
 ```
-List<String> entries = new ArrayList<>();
-
-try {
-    entries = Files.readAllLines(Paths.get("src/resources/small_log.txt"));
-} catch (IOException e) {
-    e.printStackTrace();
-}
+List<String> entries = Files.readAllLines(Paths.get("src/main/resources/small_log.txt"));
 
 HashTree hashTree = HashTreeBuilder.build(entries);
-List<Node> hashChain = HashChainBuilder.build(hashTree, "");
+List<Node> hashChain = HashChainBuilder.build(hashTree, "[INFO] No tests to run.");
 ```
