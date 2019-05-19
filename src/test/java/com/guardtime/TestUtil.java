@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestUtil {
+
     protected static final String SMALL_LOGFILE_PATH = "src/main/resources/small_log.txt";
     protected static final String LARGE_LOGFILE_PATH = "src/main/resources/large_log.txt";
     protected static final String EMPTY_LOGFILE_PATH = "src/main/resources/empty_log.txt";

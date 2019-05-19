@@ -11,6 +11,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
 
         List<String> entries = Files.readAllLines(Paths.get("src/main/resources/small_log.txt"));
