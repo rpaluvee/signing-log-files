@@ -1,0 +1,34 @@
+    public static List<Node> buildHashChain(HashTree hashTree, String entry) {
+        List<Node> hashChain = new ArrayList<>();
+        String hash = Sha256.hash(entry);
+        Node leafNode = findLeaf(hash, hashTree.getLeafNodes());
+
+        if (leafNode != null) {
+            if (leafNode.getParent() == null) {
+                throw new InvalidParameterException("Expected leaf to have a parent!");
+            }
+
+            buildHashChainHelper(hashChain, leafNode, leafNode.getParent());
+        }
+        return hashChain;
+    }
+
+    private static Node findLeaf(String hash, List<Node> leafNodes) {
+        return leafNodes.stream()
+                .filter((leaf) -> leaf.getHash().equals(hash))
+                .findFirst()
+                .orElse(null);
+    }
+
+    private static void buildHashChainHelper(List<Node> hashChain, Node child, Node parent) {
+        if (parent != null) {
+            Node nextChild = child == parent.getLeft() ? parent.getRight() : parent.getLeft();
+
+            if (nextChild != null) {
+                hashChain.add(nextChild);
+            }
+
+            buildHashChainHelper(hashChain, parent, parent.getParent());
+        }
+    }
+

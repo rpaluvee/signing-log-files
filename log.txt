@@ -1,0 +1,24 @@
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ signing-log-files ---
+[INFO] Deleting /home/rauno/IdeaProjects/signing-log-files/target
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ signing-log-files ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/rauno/IdeaProjects/signing-log-files/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ signing-log-files ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 4 source files to /home/rauno/IdeaProjects/signing-log-files/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ signing-log-files ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/rauno/IdeaProjects/signing-log-files/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ signing-log-files ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ signing-log-files ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:3.1.0:jar (default-jar) @ signing-log-files ---
+[INFO] Building jar: /home/rauno/IdeaProjects/signing-log-files/target/signing-log-files.jar

@@ -8,20 +8,15 @@ import com.guardtime.tree.Node;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
-        List<String> entries = new ArrayList<>();
-        try {
-            entries = Files.readAllLines(Paths.get("src/resources/small_log.txt"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) throws IOException {
+
+        List<String> entries = Files.readAllLines(Paths.get("src/main/resources/small_log.txt"));
 
         HashTree hashTree = HashTreeBuilder.build(entries);
-        List<Node> hashChain = HashChainBuilder.build(hashTree, "");
+        List<Node> hashChain = HashChainBuilder.build(hashTree, "[INFO] No tests to run.");
 
     }
 }
