@@ -1,0 +1,140 @@
+target/signing-log-files.jar log.txt 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building signing-log-files 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ signing-log-files ---
+[INFO] Deleting /home/rauno/IdeaProjects/signing-log-files/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (default) @ signing-log-files ---
+[INFO] argLine set to -javaagent:/home/rauno/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/home/rauno/IdeaProjects/signing-log-files/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ signing-log-files ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ signing-log-files ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 7 source files to /home/rauno/IdeaProjects/signing-log-files/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ signing-log-files ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/rauno/IdeaProjects/signing-log-files/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ signing-log-files ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /home/rauno/IdeaProjects/signing-log-files/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ signing-log-files ---
+[INFO] Surefire report directory: /home/rauno/IdeaProjects/signing-log-files/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.guardtime.builder.HashTreeBuilderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 sec
+Running com.guardtime.builder.HashChainBuilderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (report) @ signing-log-files ---
+[INFO] Loading execution data file /home/rauno/IdeaProjects/signing-log-files/target/jacoco.exec
+[INFO] Analyzed bundle 'signing-log-files' with 7 classes
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ signing-log-files ---
+[INFO] Building jar: /home/rauno/IdeaProjects/signing-log-files/target/signing-log-files.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:3.1.1:single (make-assembly) @ signing-log-files ---
+[WARNING] Artifact: guardtime:signing-log-files:jar:1.0-SNAPSHOT references the same file as the assembly destination file. Moving it to a temporary location for inclusion.
+[INFO] Building jar: /home/rauno/IdeaProjects/signing-log-files/target/signing-log-files.jar
+[WARNING] Configuration option 'appendAssemblyId' is set to false.
+Instead of attaching the assembly file: /home/rauno/IdeaProjects/signing-log-files/target/signing-log-files.jar, it will become the file for main project artifact.
+NOTE: If multiple descriptors or descriptor-formats are provided for this project, the value of this file will be non-deterministic!
+[WARNING] Replacing pre-existing project main-artifact file: /home/rauno/IdeaProjects/signing-log-files/target/archive-tmp/signing-log-files.jar
+with assembly file: /home/rauno/IdeaProjects/signing-log-files/target/signing-log-files.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.634 s
+[INFO] Finished at: 2019-05-19T23:00:50+03:00
+[INFO] Final Memory: 26M/360M
+[INFO] ------------------------------------------------------------------------
+Exception in thread "main" java.lang.RuntimeException: Entry not found in tree
+	at com.guardtime.builder.HashChainBuilder.build(HashChainBuilder.java:23)
+	at com.guardtime.Main.main(Main.java:24)
+rauno@aspire:~/IdeaProjects/signing-log-files$ mvn clean package && java -jar ./target/signing-log-files.jar log.txt 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building signing-log-files 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ signing-log-files ---
+[INFO] Deleting /home/rauno/IdeaProjects/signing-log-files/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (default) @ signing-log-files ---
+[INFO] argLine set to -javaagent:/home/rauno/.m2/repository/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/home/rauno/IdeaProjects/signing-log-files/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ signing-log-files ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ signing-log-files ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 7 source files to /home/rauno/IdeaProjects/signing-log-files/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ signing-log-files ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/rauno/IdeaProjects/signing-log-files/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ signing-log-files ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /home/rauno/IdeaProjects/signing-log-files/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ signing-log-files ---
+[INFO] Surefire report directory: /home/rauno/IdeaProjects/signing-log-files/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.guardtime.builder.HashTreeBuilderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.1 sec
+Running com.guardtime.builder.HashChainBuilderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 sec
+
+Results :
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (report) @ signing-log-files ---
+[INFO] Loading execution data file /home/rauno/IdeaProjects/signing-log-files/target/jacoco.exec
+[INFO] Analyzed bundle 'signing-log-files' with 7 classes
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ signing-log-files ---
+[INFO] Building jar: /home/rauno/IdeaProjects/signing-log-files/target/signing-log-files.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:3.1.1:single (make-assembly) @ signing-log-files ---
+[WARNING] Artifact: guardtime:signing-log-files:jar:1.0-SNAPSHOT references the same file as the assembly destination file. Moving it to a temporary location for inclusion.
+[INFO] Building jar: /home/rauno/IdeaProjects/signing-log-files/target/signing-log-files.jar
+[WARNING] Configuration option 'appendAssemblyId' is set to false.
+Instead of attaching the assembly file: /home/rauno/IdeaProjects/signing-log-files/target/signing-log-files.jar, it will become the file for main project artifact.
+NOTE: If multiple descriptors or descriptor-formats are provided for this project, the value of this file will be non-deterministic!
+[WARNING] Replacing pre-existing project main-artifact file: /home/rauno/IdeaProjects/signing-log-files/target/archive-tmp/signing-log-files.jar
+with assembly file: /home/rauno/IdeaProjects/signing-log-files/target/signing-log-files.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.714 s
+[INFO] Finished at: 2019-05-19T23:02:39+03:00
+[INFO] Final Memory: 26M/364M
+[INFO] ------------------------------------------------------------------------
+Exception in thread "main" java.lang.RuntimeException: Entry not found in tree
+	at com.guardtime.builder.HashChainBuilder.build(HashChainBuilder.java:23)
+	at com.guardtime.Main.main(Main.java:24)
