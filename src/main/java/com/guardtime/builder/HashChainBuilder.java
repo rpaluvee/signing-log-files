@@ -54,7 +54,7 @@ public class HashChainBuilder {
             }
 
             if (parent.getRight() == null) {
-                if (!parent.getHash().equals(parent.getLeft().getHash())) {
+                if (!parent.getHash().equals(Sha256.hash(parent.getLeft().getHash()))) {
                     return false;
                 }
             } else {

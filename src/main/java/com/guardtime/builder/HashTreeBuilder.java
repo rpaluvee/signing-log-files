@@ -71,7 +71,7 @@ public class HashTreeBuilder {
         parent.setRight(rightChild);
 
         if (rightChild == null) {
-            parent.setHash(leftChild.getHash());
+            parent.setHash(Sha256.hash(leftChild.getHash()));
             leftChild.setParent(parent);
         } else {
             parent.setHash(Sha256.hash(leftChild.getHash() + rightChild.getHash()));
