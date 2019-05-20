@@ -17,7 +17,12 @@ public class Main {
         List<String> entries = Files.readAllLines(Paths.get(args[0]));
 
         HashTree hashTree = HashTreeBuilder.build(entries);
-        List<Node> hashChain = HashChainBuilder.build(hashTree, "[INFO] No tests to run.");
+        List<Node> hashChain = HashChainBuilder.build(hashTree, "[INFO] BUILD SUCCESS");
 
+        /*
+        Node root = hashChain.get(hashChain.size() - 1);
+        KSISignature ksiSignature = KsiSigner.signHash(root.getHash());
+         */
     }
+
 }

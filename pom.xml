@@ -35,6 +35,11 @@
             <artifactId>ksi-api</artifactId>
             <version>4.14.193</version>
         </dependency>
+        <dependency>
+            <groupId>com.guardtime</groupId>
+            <artifactId>ksi-service-client-simple-http</artifactId>
+            <version>4.14.193</version>
+        </dependency>
     </dependencies>
 
     <build>
