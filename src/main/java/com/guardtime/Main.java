@@ -14,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        List<String> entries = Files.readAllLines(Paths.get("src/main/resources/small_log.txt"));
+        List<String> entries = Files.readAllLines(Paths.get(args[0]));
 
         HashTree hashTree = HashTreeBuilder.build(entries);
         List<Node> hashChain = HashChainBuilder.build(hashTree, "[INFO] No tests to run.");
