@@ -39,6 +39,18 @@ To run the built archive:
 $ java -jar ./target/signing-log-files.jar
 ```
 
+To run with arguments:
+
+```
+$ java -jar ./target/signing-log-files.jar <filepath> <entry>
+```
+
+Running with arguments example:
+
+```
+$ java -jar ./target/signing-log-files.jar "large_log.txt" "[INFO] BUILD SUCCESS"
+```
+
 ### Example of use
 
 ```
